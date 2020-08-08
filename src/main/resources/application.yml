@@ -1,0 +1,23 @@
+## default connection pool
+spring:
+  main:
+    banner-mode: off
+  output:
+    ansi:
+      enabled: always
+  datasource:
+    hikari:
+      connectionTimeout: 20000
+      maximumPoolSize: 5
+    ## PostgreSQL
+    url: jdbc:postgresql://localhost:5440/learner
+    username: user
+    password: password
+  jpa:
+    hibernate:
+      ddl-auto: create
+
+    properties:
+      hibernate:
+      # The SQL dialect makes Hibernate generate better SQL for the chosen database
+      # dialect: org.hibernate.dialect.
